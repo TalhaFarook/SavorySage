@@ -7,7 +7,6 @@ import numpy
 import re
 
 import spacy
-nlp = spacy.load("en_core_web_sm")
 SSModel = spacy.load('SavorySage')
 
 from sklearn.metrics.pairwise import cosine_similarity
