@@ -50,6 +50,13 @@ inputForm.addEventListener('submit', function(event) {
             message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${response}</p>`;
             conversation.appendChild(message);
             message.scrollIntoView({behavior: "smooth"});
+
+            const moreResponse = "Do you want more recommendations? 😁";
+            const moreMessage = document.createElement('div');
+            moreMessage.classList.add('chatbot-message', 'chatbot');
+            moreMessage.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${moreResponse}</p>`;
+            conversation.appendChild(moreMessage);
+            moreMessage.scrollIntoView({behavior: "smooth"});
         }
     };
     
