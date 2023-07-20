@@ -9,3 +9,4 @@ spacy==3.6.0
 spacy-legacy==3.0.12
 spacy-loggers==1.0.4
 spacy-lookups-data==1.0.3
+gunicorn==21.2.0
