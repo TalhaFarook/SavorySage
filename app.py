@@ -54,7 +54,7 @@ def createResponse(query, latitude, longitude, coordCheck):
     if coordCheck == 0:
         location, cuisine, budget, rating = extractEntitiesWithoutLocation(query)
 
-        return f"Location: {location}\nCuisine: {cuisine}\nBudget: {budget}\nRating: {rating}"
+        # return f"Location: {location}\nCuisine: {cuisine}\nBudget: {budget}\nRating: {rating}"
 
         response = ''
         if not location or not cuisine or not budget or not rating:
@@ -77,7 +77,7 @@ def createResponse(query, latitude, longitude, coordCheck):
     elif coordCheck == 1:
         cuisine, budget, rating = extractEntitiesWithLocation(query)
 
-        return f"Cuisine: {cuisine}\nBudget: {budget}\nRating: {rating}"
+        # return f"Cuisine: {cuisine}\nBudget: {budget}\nRating: {rating}"
 
         response = ''
         if not cuisine or not budget or not rating:
