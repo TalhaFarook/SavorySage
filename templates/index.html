@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SavorySage</title>
+    <link rel="icon" type="image/x-icon" href="https://static-00.iconduck.com/assets.00/chat-bot-icon-512x512-6kcwn206.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chatbot-container">
+        <div id="header">
+            <h1>SavorySage:<br>AI-Driven Savory Restaurant Recommendations</h1>
+        </div>
+        <div id="chatbot">
+            <div id="conversation">
+              <div class="chatbot-message">
+                <p class="chatbot-text">Hello, can you please provide me details so I can recommend a good resturant? 😊</p>
+              </div>
+              <div class="chatbot-message">
+                  <p class="chatbot-text">You can either enable or provide your location. 💬</p>
+              </div>
+            </div>
+            <form id="input-form">
+              <message-container>
+                <input id="input-field" type="text" placeholder="Type your message here">
+                <button id="submit-button" type="submit">
+                  <img class="send-icon" src="https://cdn-icons-png.flaticon.com/512/60/60525.png" alt="" height="28" width="28">
+                </button>
+              </message-container>  
+            </form>
+        </div> 
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
