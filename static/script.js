@@ -45,18 +45,21 @@ inputForm.addEventListener('submit', function(event) {
     xhr.onload = function() {
         if (xhr.status === 200) {
             const response = xhr.responseText;
+            console.log(xhr.responseText)
             const message = document.createElement('div');
             message.classList.add('chatbot-message', 'chatbot');
             message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${response}</p>`;
             conversation.appendChild(message);
             message.scrollIntoView({behavior: "smooth"});
 
-            const moreResponse = "Do you want more recommendations? 😁";
-            const moreMessage = document.createElement('div');
-            moreMessage.classList.add('chatbot-message', 'chatbot');
-            moreMessage.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${moreResponse}</p>`;
-            conversation.appendChild(moreMessage);
-            moreMessage.scrollIntoView({behavior: "smooth"});
+            if (!xhr.responseText.includes('Can you please')) {
+                const moreResponse = "Do you want more recommendations? 😁";
+                const moreMessage = document.createElement('div');
+                moreMessage.classList.add('chatbot-message', 'chatbot');
+                moreMessage.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${moreResponse}</p>`;
+                conversation.appendChild(moreMessage);
+                moreMessage.scrollIntoView({behavior: "smooth"});
+            }
         }
     };
     
